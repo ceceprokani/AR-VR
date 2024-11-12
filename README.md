@@ -1,5 +1,5 @@
-# learning-ARVR
-Repo ini digunakan untuk belajar tentang ARVR dan dibuat untuk memenuhi UTS matakuliah Augmented dan Virtual Reality
+# Marker based Augmented Reality dengan ARJS
+Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan ARJS dan dibuat untuk memenuhi Tugas matakuliah Augmented dan Virtual Reality
 
 ## Screenshoot Aplikasi
 <div align="center">

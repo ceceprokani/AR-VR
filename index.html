@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  Created by  : Cecep Rokani
+  Email       : ceceprokani9712@gmail.com
+-->
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+      <a-assets>
+        <a-asset-item id="koi-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/koi.gltf?v=1701166670852"></a-asset-item>
+        <a-asset-item id="hiro-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/scene.gltf?v=1701165769498"></a-asset-item>
+      </a-assets>
+
+      <a-marker preset="kanji">
+        <a-entity gltf-model="#koi-model" scale="0.2 0.2 0.2"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      </a-marker>
+
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#hiro-model" scale="1 1 1"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      </a-marker>
+
+      <a-entity camera>
+        <a-cursor></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

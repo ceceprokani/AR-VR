@@ -8,7 +8,7 @@ Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan A
 
 ## Hallo semuanya 👋
 Perkenalkan saya: Cecep Rokani ([@ceceprokani](https://github.com/ceceprokani/)). Disini saya Membuat tema AR sederhana yaitu __Character Digimon__.
-Untuk marker sendiri menggunakan preset default __Kanju__, __Hiro__, dan __Barcode__
+Untuk marker sendiri menggunakan preset default __Kanji__, __Hiro__, dan __Barcode__
 
 
 ### Penggunaan Aplikasi
@@ -19,7 +19,7 @@ Untuk marker sendiri menggunakan preset default __Kanju__, __Hiro__, dan __Barco
 ### Marker Digimon
 __1. Semua Marker__
 
-Berikut ini adalah daftar marker semua character digmon
+Berikut ini adalah daftar marker semua character digimon
 <div align="center">
     <img src="assets/paper_uts.png?v=251120241400" alt="Image Paper" width="700"/>
 </div>
@@ -28,31 +28,31 @@ Berikut ini adalah daftar marker semua character digmon
 __2. Marker Per Character__
 
 Berikut ini adalah daftar marker permodel
-- Model 1
+- Character 1
 <div align="center">
     <img src="assets/model-1.png" alt="Image Paper" width="300"/>
 </div>
 <br>
 
-- Model 2
+- Character 2
 <div align="center">
     <img src="assets/model-2.png" alt="Image Paper" width="300"/>
 </div>
 <br>
 
-- Model 3
+- Character 3
 <div align="center">
     <img src="assets/model-3.png" alt="Image Paper" width="300"/>
 </div>
 <br>
 
-- Model 4
+- Character 4
 <div align="center">
     <img src="assets/model-4.png" alt="Image Paper" width="300"/>
 </div>
 <br>
 
-- Model 5
+- Character 5
 <div align="center">
     <img src="assets/model-5.png" alt="Image Paper" width="300"/>
 </div>

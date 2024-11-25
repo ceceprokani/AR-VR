@@ -29,30 +29,30 @@ __2. Marker Per Character__
 
 Berikut ini adalah daftar marker permodel
 - Model 1
-<div>
-    <img src="assets/model-1.png" alt="Image Paper" width="700"/>
+<div align="center">
+    <img src="assets/model-1.png" alt="Image Paper" width="200"/>
 </div>
 <br>
 
 - Model 2
-<div>
-    <img src="assets/model-2.png" alt="Image Paper" width="700"/>
+<div align="center">
+    <img src="assets/model-2.png" alt="Image Paper" width="200"/>
 </div>
 <br>
 
 - Model 3
-<div>
-    <img src="assets/model-3.png" alt="Image Paper" width="700"/>
+<div align="center">
+    <img src="assets/model-3.png" alt="Image Paper" width="200"/>
 </div>
 <br>
 
 - Model 4
-<div>
-    <img src="assets/model-4.png" alt="Image Paper" width="700"/>
+<div align="center">
+    <img src="assets/model-4.png" alt="Image Paper" width="200"/>
 </div>
 <br>
 
 - Model 5
-<div>
-    <img src="assets/model-5.png" alt="Image Paper" width="700"/>
+<div align="center">
+    <img src="assets/model-5.png" alt="Image Paper" width="200"/>
 </div>

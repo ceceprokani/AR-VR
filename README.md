@@ -1,5 +1,5 @@
 # Marker based Augmented Reality dengan ARJS
-Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan ARJS dan dibuat untuk memenuhi Tugas matakuliah Augmented dan Virtual Reality
+Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan ARJS dan dibuat untuk memenuhi __Ujian Tengah Semester__ matakuliah Augmented dan Virtual Reality
 
 ## Screenshoot Aplikasi
 <div align="center">
@@ -7,9 +7,8 @@ Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan A
 </div>
 
 ## Hallo semuanya 👋
-Perkenalkan saya: Cecep Rokani ([@ceceprokani](https://github.com/ceceprokani/)). Disini saya Membuat tema AR sederhana yaitu __Ikan dan Manusia__.
-__Ikan dan Manusia__ merupakan sebuah aplikasi AR sederhana yang memiliki 2 Marker (__Kanji__ dan __Hiro__).
-Tujuan utama dari aplikasi ini adalah __tentunya untuk proses belajar saya sekaligus sebagai tugas matakuliah Augmented dan Virtual Reality__. 
+Perkenalkan saya: Cecep Rokani ([@ceceprokani](https://github.com/ceceprokani/)). Disini saya Membuat tema AR sederhana yaitu __Character Digimon__.
+Untuk marker sendiri menggunakan preset default __Kanju__, __Hiro__, dan __Barcode__
 
 
 ### Penggunaan Aplikasi

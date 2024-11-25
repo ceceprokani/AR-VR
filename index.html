@@ -11,17 +11,35 @@
   <body style="margin: 0px; overflow: hidden">
     <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
       <a-assets>
-        <a-asset-item id="koi-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/koi.gltf?v=1701166670852"></a-asset-item>
-        <a-asset-item id="hiro-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/scene.gltf?v=1701165769498"></a-asset-item>
+        <a-asset-item id="wargreymon-digimon-model" src="/assets/wargreymon_digimon/scene.gltf"></a-asset-item>
+        <a-asset-item id="digimon-loogamon-model" src="/assets/digimon_loogamon/scene.gltf"></a-asset-item>
+        <a-asset-item id="digimon-gogmamon-model" src="/assets/digimon_gogmamon/scene.gltf"></a-asset-item>
+        <a-asset-item id="digimon-garurumon-model" src="/assets/digimon_garurumon/scene.gltf"></a-asset-item>
+        <a-asset-item id="digimon-guilmon-model" src="/assets/digimon_guilmon/scene.gltf"></a-asset-item>
       </a-assets>
 
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#wargreymon-digimon-model" scale="0.3 0.3 0.3"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; startEvents:mouseenter"></a-entity>
+      </a-marker>
+
       <a-marker preset="kanji">
-        <a-entity gltf-model="#koi-model" scale="0.2 0.2 0.2"
+        <a-entity gltf-model="#digimon-loogamon-model" scale="0.4 0.4 0.4"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
       </a-marker>
 
-      <a-marker preset="hiro">
-        <a-entity gltf-model="#hiro-model" scale="1 1 1"
+      <a-marker type="barcode" value="10">
+        <a-entity gltf-model="#digimon-gogmamon-model" scale="0.3 0.3 0.3"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      </a-marker>
+
+      <a-marker type="barcode" value="11">
+        <a-entity gltf-model="#digimon-garurumon-model" scale="0.4 0.4 0.4"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      </a-marker>
+
+      <a-marker type="barcode" value="12">
+        <a-entity gltf-model="#digimon-guilmon-model" scale="0.4 0.4 0.4"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
       </a-marker>
 

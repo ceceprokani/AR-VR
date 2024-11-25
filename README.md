@@ -16,7 +16,7 @@ Untuk marker sendiri menggunakan preset default __Kanju__, __Hiro__, dan __Barco
 - Silahkan akses aplikasi bisa melalui tautan berikut ini : [Tautan Aplikasi](https://bow-coherent-walnut.glitch.me)
 - Setelah aplikasi berjalan lancar, silahkan scan/arahkan kamera device pada marker dibawah ini untuk melihat 3D Model pada aplikasi
 
-#### Marker Hiro & Kanji
+#### Marker Digimon
 <div align="center">
     <img src="assets/paper_uts.png?v=251120241400" alt="Image Paper" width="700"/>
 </div>

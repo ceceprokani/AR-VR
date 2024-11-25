@@ -3,7 +3,7 @@ Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan A
 
 ## Screenshoot Aplikasi
 <div align="center">
-    <img src="assets/screenshoot.jpg?v=251120241400" alt="screenshoot Image" width="700" style="transform: rotate(-90deg);"/>
+    <img src="assets/screenshoot_new.jpg?v=251120241400" alt="screenshoot Image" width="700" style="transform: rotate(-90deg);"/>
 </div>
 
 ## Hallo semuanya 👋

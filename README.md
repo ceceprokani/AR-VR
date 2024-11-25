@@ -3,7 +3,7 @@ Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan A
 
 ## Screenshoot Aplikasi
 <div align="center">
-    <img src="assets/screenshoot.jpg" alt="screenshoot Image" width="700" style="transform: rotate(-90deg);"/>
+    <img src="assets/screenshoot.jpg?v=251120241400" alt="screenshoot Image" width="700" style="transform: rotate(-90deg);"/>
 </div>
 
 ## Hallo semuanya 👋
@@ -18,5 +18,5 @@ Untuk marker sendiri menggunakan preset default __Kanju__, __Hiro__, dan __Barco
 
 #### Marker Hiro & Kanji
 <div align="center">
-    <img src="assets/paper.png" alt="Image Paper" width="700"/>
+    <img src="assets/paper.png?v=251120241400" alt="Image Paper" width="700"/>
 </div>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Wargreymon digimon
+* source:	https://sketchfab.com/3d-models/wargreymon-digimon-d93136302b6244a190b8a3fc22da0e1c
+* author:	ijackprovostjr (https://sketchfab.com/ijackprovostjr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Wargreymon digimon" (https://sketchfab.com/3d-models/wargreymon-digimon-d93136302b6244a190b8a3fc22da0e1c) by ijackprovostjr (https://sketchfab.com/ijackprovostjr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

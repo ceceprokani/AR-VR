@@ -1,33 +1,81 @@
 <!DOCTYPE html>
-<!--
-  Created by  : Cecep Rokani
-  Email       : ceceprokani9712@gmail.com
--->
-<html>
-  <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  </head>
-  <body style="margin: 0px; overflow: hidden">
-    <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-      <a-assets>
-        <a-asset-item id="koi-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/koi.gltf?v=1701166670852"></a-asset-item>
-        <a-asset-item id="hiro-model" src="https://cdn.glitch.global/080acf8b-2337-4f4d-9248-08dbbe210a39/scene.gltf?v=1701165769498"></a-asset-item>
-      </a-assets>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Digimon VR - Space Background</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Tambahkan Ambient Light -->
+    <a-light type="directional" color="#ffffff" intensity="1" position="2 4 5"></a-light>
+    <!-- Langit Luar Angkasa -->
+    <a-entity environment="preset: starry; fog: 0.1;"></a-entity>
 
-      <a-marker preset="kanji">
-        <a-entity gltf-model="#koi-model" scale="0.2 0.2 0.2"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
-      </a-marker>
+    <!-- Karakter Digimon 1 - Gururumon -->
+    <a-entity id="digimon-1" 
+              gltf-model="/assets/digimon_garurumon/scene.gltf" 
+              position="-9 1.5 -5" 
+              scale="1 1 1" 
+              rotation="0 0 0">
+    </a-entity>
 
-      <a-marker preset="hiro">
-        <a-entity gltf-model="#hiro-model" scale="1 1 1"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
-      </a-marker>
+    <!-- Karakter Digimon 4 - Loogamon -->
+    <a-entity id="digimon-4" 
+              gltf-model="/assets/digimon_loogamon/scene.gltf" 
+              position="-2.5 2 -1" 
+              scale="0.5 0.5 0.5" 
+              rotation="0 0 0">
+    </a-entity>
 
-      <a-entity camera>
-        <a-cursor></a-cursor>
-      </a-entity>
-    </a-scene>
-  </body>
+    <!-- Karakter Digimon 2 - Gogmamon -->
+    <a-entity id="digimon-2" 
+              gltf-model="/assets/digimon_gogmamon/scene.gltf" 
+              position="0 2 -1.5" 
+              scale="0.5 0.5 0.5" 
+              rotation="0 0 0">
+    </a-entity>
+
+    <!-- Karakter Digimon 3 - Guilmon -->
+    <a-entity id="digimon-3" 
+              gltf-model="/assets/digimon_guilmon/scene.gltf" 
+              position="6 2.2 -5" 
+              scale="0.8 0.8 2" 
+              rotation="0 -45 0">
+    </a-entity>
+
+    <!-- Karakter Digimon 5 - WarGreymon -->
+    <a-entity id="digimon-5" 
+              gltf-model="/assets/digimon_wargreymon/scene.gltf" 
+              position="12 0 -7" 
+              scale="1 1 1" 
+              rotation="0 0 0">
+    </a-entity>
+
+    <!-- Kamera -->
+    <a-entity camera position="0 2 2"></a-entity>
+  </a-scene>
+
+  <script>
+    // Tambahkan animasi rotasi untuk setiap karakter
+    const digimonIds = ['digimon-1', 'digimon-2', 'digimon-3', 'digimon-4', 'digimon-5'];
+    digimonIds.forEach(id => {
+      const digimon = document.querySelector(`#${id}`);
+      // digimon.setAttribute('animation__rotate', {
+      //   property: 'rotation',
+      //   to: '0 360 0',
+      //   loop: true,
+      //   dur: 8000
+      // });
+
+      // Tambahkan interaksi klik untuk mengubah skala atau warna
+      digimon.addEventListener('click', () => {
+        digimon.setAttribute('scale', `${Math.random() * 2} ${Math.random() * 2} ${Math.random() * 2}`);
+        digimon.setAttribute('material', 'color', '#' + Math.floor(Math.random() * 16777215).toString(16));
+      });
+    });
+  </script>
+</body>
 </html>

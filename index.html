@@ -14,55 +14,48 @@
     <!-- Langit Luar Angkasa -->
     <a-entity environment="preset: starry; fog: 0.1;"></a-entity>
 
-    <!-- Karakter Digimon 1 - Gururumon -->
+    <!-- Karakter Digimon -->
     <a-entity id="digimon-1" 
               gltf-model="assets/digimon_garurumon/scene.gltf" 
               position="-9 1.5 -5" 
-              scale="1 1 1" 
-              rotation="0 0 0">
-    </a-entity>
+              scale="1 1 1"></a-entity>
 
-    <!-- Karakter Digimon 4 - Loogamon -->
-    <a-entity id="digimon-4" 
-              gltf-model="assets/digimon_loogamon/scene.gltf" 
-              position="-2.5 2 -1" 
-              scale="0.5 0.5 0.5" 
-              rotation="0 0 0">
-    </a-entity>
-
-    <!-- Karakter Digimon 2 - Gogmamon -->
     <a-entity id="digimon-2" 
               gltf-model="assets/digimon_gogmamon/scene.gltf" 
               position="0 2 -1.5" 
-              scale="0.5 0.5 0.5" 
-              rotation="0 0 0">
-    </a-entity>
+              scale="0.5 0.5 0.5"></a-entity>
 
-    <!-- Karakter Digimon 3 - Guilmon -->
     <a-entity id="digimon-3" 
               gltf-model="assets/digimon_guilmon/scene.gltf" 
               position="6 2.2 -5" 
-              scale="0.8 0.8 2" 
-              rotation="0 -45 0">
-    </a-entity>
+              scale="0.8 0.8 2"></a-entity>
 
-    <!-- Karakter Digimon 5 - WarGreymon -->
+    <a-entity id="digimon-4" 
+              gltf-model="assets/digimon_loogamon/scene.gltf" 
+              position="-4 1 -1" 
+              scale="0.8 0.8 0.8"></a-entity>
+
     <a-entity id="digimon-5" 
               gltf-model="assets/digimon_wargreymon/scene.gltf" 
               position="12 0 -7" 
-              scale="1 1 1" 
-              rotation="0 0 0">
-    </a-entity>
+              scale="1 1 1"></a-entity>
 
-    <!-- Kamera -->
-    <a-entity camera position="0 2 2"></a-entity>
+    <!-- Kamera dengan kontrol WASD -->
+    <a-entity camera 
+              position="0 2 5" 
+              look-controls 
+              wasd-controls="acceleration: 50">
+    </a-entity>
   </a-scene>
 
   <script>
-    // Tambahkan animasi rotasi untuk setiap karakter
+    // Daftar karakter Digimon
     const digimonIds = ['digimon-1', 'digimon-2', 'digimon-3', 'digimon-4', 'digimon-5'];
+
     digimonIds.forEach(id => {
       const digimon = document.querySelector(`#${id}`);
+
+      // Tambahkan animasi rotasi
       // digimon.setAttribute('animation__rotate', {
       //   property: 'rotation',
       //   to: '0 360 0',
@@ -70,9 +63,10 @@
       //   dur: 8000
       // });
 
-      // Tambahkan interaksi klik untuk mengubah skala atau warna
+      // Tambahkan interaksi klik untuk mengubah skala dan warna
       digimon.addEventListener('click', () => {
-        digimon.setAttribute('scale', `${Math.random() * 2} ${Math.random() * 2} ${Math.random() * 2}`);
+        const randomScale = Math.random() * 1.5 + 0.5; // Skala antara 0.5 - 2
+        digimon.setAttribute('scale', `${randomScale} ${randomScale} ${randomScale}`);
         digimon.setAttribute('material', 'color', '#' + Math.floor(Math.random() * 16777215).toString(16));
       });
     });

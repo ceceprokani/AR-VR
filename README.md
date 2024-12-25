@@ -1,5 +1,5 @@
-# Marker based Augmented Reality dengan ARJS
-Repo ini digunakan untuk belajar tentang Marker based Augmented Reality dengan ARJS dan dibuat untuk memenuhi Tugas matakuliah Augmented dan Virtual Reality
+# Marker based Virtual Reality dengan AFrame
+Repo ini digunakan untuk belajar tentang Marker based Virtual Reality dengan AFrame dan dibuat untuk memenuhi Tugas matakuliah Augmented dan Virtual Reality
 
 ## Screenshoot Aplikasi
 <div align="center">
@@ -16,8 +16,3 @@ Tujuan utama dari aplikasi ini adalah __tentunya untuk proses belajar saya sekal
 
 - Silahkan akses aplikasi bisa melalui tautan berikut ini : [Tautan Aplikasi](https://bow-coherent-walnut.glitch.me)
 - Setelah aplikasi berjalan lancar, silahkan scan/arahkan kamera device pada marker dibawah ini untuk melihat 3D Model pada aplikasi
-
-#### Marker Hiro & Kanji
-<div align="center">
-    <img src="assets/paper.png" alt="Image Paper" width="700"/>
-</div>

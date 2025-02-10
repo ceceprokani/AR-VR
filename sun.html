@@ -33,10 +33,10 @@
 
 <body>
     <a-scene fog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
-        camera-position environment="preset: moon" info-message="htmlSrc: #messageText">
+        camera-position environment="preset: volcano" info-message="htmlSrc: #messageText">
         <a-assets>
             <img id="thumbMars" crossOrigin="anonymous" src="images/mars.png">
-            <img id="thumbSun" crossOrigin="anonymous" src="images/sun.png">
+            <img id="thumbIndex" crossOrigin="anonymous" src="images/moon.png">
             <img id="thumb3Dplanets" crossOrigin="anonymous" src="images/3d-planets.jpg">
             <audio id="space_audio" src="assets/space-audio.mp3"></audio>
             <a-asset-item id="messageText" src="message.html"></a-asset-item>
@@ -44,7 +44,7 @@
 
         <a-sound src="#space_audio" autoplay="true"></a-sound>
         <a-link href="mars.html"    title="Mars" position="-3.5 1.5 -3.0" image="#thumbMars"></a-link>
-        <a-link href="sun.html"     title="Sun" position="0 1.5 -3.0" image="#thumbSun"></a-link>
+        <a-link href="index.html"     title="Moon" position="0 1.5 -3.0" image="#thumbIndex"></a-link>
         <a-link href="3d-planets.html"  title="3D Planets" position="3.5 1.5 -3.0" image="#thumb3Dplanets"></a-link>
         <a-entity light="type: point; color: #f4f4f4; intensity: 0.4; distance: 0" position="0 2 0"></a-entity>
         <a-entity id="leftHand" link-controls="hand: left"></a-entity>

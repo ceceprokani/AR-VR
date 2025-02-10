@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden">
+  <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-assets>
+      <a-asset-item id="hiro-model"
+        src="https://cdn.glitch.global/7d6010e8-4836-42ef-a023-a17bfcf46f55/mars.gltf?v=1708928053140"></a-asset-item>
+      <a-asset-item id="sun-model"
+        src="https://cdn.glitch.global/7d6010e8-4836-42ef-a023-a17bfcf46f55/scene.gltf?v=1708927668611"></a-asset-item>
+    </a-assets>
+
+    <a-marker preset="hiro">
+      <a-entity gltf-model="#hiro-model" scale="0.7 0.7 0.7"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+    </a-marker>
+
+    <a-marker preset="kanji">
+      <a-entity gltf-model="#sun-model" scale="0.1 0.1 0.1"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+    </a-marker>
+
+    <a-entity camera>
+      <a-cursor></a-cursor>
+    </a-entity>
+  </a-scene>
+</body>
+
+</html>

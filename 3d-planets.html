@@ -9,19 +9,45 @@
 <body style="margin: 0px; overflow: hidden">
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
     <a-assets>
-      <a-asset-item id="hiro-model"
-        src="https://cdn.glitch.global/7d6010e8-4836-42ef-a023-a17bfcf46f55/mars.gltf?v=1708928053140"></a-asset-item>
+      <a-asset-item id="earth-model"
+        src="assets/3d-planets/assets/earth/scene.gltf?v=202502101005">
+      </a-asset-item>
+      <a-asset-item id="moon-model"
+        src="assets/3d-planets/assets/moon/scene.gltf?v=202502101019">
+      </a-asset-item>
+      <a-asset-item id="mars-model"
+        src="assets/3d-planets/assets/mars/mars.gltf?v=202502101005">
+      </a-asset-item>
+      <a-asset-item id="jupiter-model"
+        src="assets/3d-planets/assets/jupiter/scene.gltf?v=202502101005">
+      </a-asset-item>
       <a-asset-item id="sun-model"
-        src="https://cdn.glitch.global/7d6010e8-4836-42ef-a023-a17bfcf46f55/scene.gltf?v=1708927668611"></a-asset-item>
+        src="assets/3d-planets/assets/sun/scene.gltf?v=202502101005">
+      </a-asset-item>
     </a-assets>
 
     <a-marker preset="hiro">
-      <a-entity gltf-model="#hiro-model" scale="0.7 0.7 0.7"
+      <a-entity gltf-model="#earth-model" scale="0.2 0.2 0.2"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
     </a-marker>
 
     <a-marker preset="kanji">
-      <a-entity gltf-model="#sun-model" scale="0.1 0.1 0.1"
+      <a-entity gltf-model="#sun-model" scale="0.2 0.2 0.2"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="10">
+      <a-entity gltf-model="#moon-model" scale="0.3 0.3 0.3"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="11">
+      <a-entity gltf-model="#mars-model" scale="1 1 1"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+    </a-marker>
+
+    <a-marker type="barcode" value="12">
+      <a-entity gltf-model="#jupiter-model" scale="0.05 0.05 0.05"
         animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
     </a-marker>
 

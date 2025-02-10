@@ -3,53 +3,63 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Walking in outer space - By Cecep Rokani</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+    <title>Walking in Outer Space - By Cecep Rokani</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Links • A-Frame">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- A-Frame -->
     <script src="dist/aframe-master.js"></script>
     <script src="js/components/aframe-tooltip-component.js"></script>
     <script src="js/components/camera-position.js"></script>
     <script src="js/components/link-controls.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js">
-    </script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js"></script>
     <script src="js/info-message.js"></script>
 </head>
 
 <body>
     <a-scene fog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse"
         camera-position environment="preset: moon" info-message="htmlSrc: #messageText">
+        
         <a-assets>
-            <img id="thumbMars" crossOrigin="anonymous" src="images/mars.png">
-            <img id="thumbSun" crossOrigin="anonymous" src="images/sun.png">
-            <img id="thumb3Dplanets" crossOrigin="anonymous" src="images/3d-planets.jpg">
+            <img id="thumbJupiter" crossOrigin="anonymous" src="assets/images/jupiter.png">
+            <img id="thumbMars" crossOrigin="anonymous" src="assets/images/mars.png">
+            <img id="thumbSun" crossOrigin="anonymous" src="assets/images/sun.png">
+            <img id="thumb3Dplanets" crossOrigin="anonymous" src="assets/images/3d-planets.jpg">
+            <img id="thumbEarth" crossOrigin="anonymous" src="assets/images/earth.png">
             <audio id="space_audio" src="assets/space-audio.mp3"></audio>
             <a-asset-item id="messageText" src="message.html"></a-asset-item>
         </a-assets>
 
         <a-sound src="#space_audio" autoplay="true"></a-sound>
-        <a-link href="mars.html"    title="Mars" position="-3.5 1.5 -3.0" image="#thumbMars"></a-link>
-        <a-link href="sun.html"     title="Sun" position="0 1.5 -3.0" image="#thumbSun"></a-link>
-        <a-link href="3d-planets.html"  title="3D Planets" position="3.5 1.5 -3.0" image="#thumb3Dplanets"></a-link>
+
+        <!-- Planet Links -->
+        <a-link href="jupiter.html" title="Jupiter" position="-7 1.5 -3.0" image="#thumbJupiter"></a-link>
+        <a-link href="mars.html" title="Mars" position="-3.5 1.5 -3.0" image="#thumbMars"></a-link>
+        <a-link href="sun.html" title="Sun" position="0 1.5 -3.0" image="#thumbSun"></a-link>
+        <a-link href="earth.html" title="Bumi" position="3.5 1.5 -3.0" image="#thumbEarth"></a-link>
+        <a-link href="3d-planets.html" title="AR 3D Planets" position="7 1.5 -3.0" image="#thumb3Dplanets"></a-link>
+
+        <!-- Lighting -->
         <a-entity light="type: point; color: #f4f4f4; intensity: 0.4; distance: 0" position="0 2 0"></a-entity>
+
         <a-entity id="leftHand" link-controls="hand: left"></a-entity>
         <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+        
+        <!-- Camera -->
+        <a-entity id="cameraRig" position="0 0 2">
+            <a-entity id="camera" camera look-controls camera-position></a-entity>
+        </a-entity>
     </a-scene>
-</body>
 
+    <!-- Joystick untuk Mobile -->
+    <div id="joystick-container">
+        <button class="joystick" id="left-btn"><i class="fas fa-arrow-left"></i></button>
+        <button class="joystick" id="up-btn"><i class="fas fa-arrow-up"></i></button>
+        <button class="joystick" id="down-btn"><i class="fas fa-arrow-down"></i></button>
+        <button class="joystick" id="right-btn"><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

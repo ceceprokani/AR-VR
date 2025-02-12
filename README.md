@@ -1,4 +1,4 @@
-# 🚀 Virtual Space Exploration: Augmented & Virtual Reality  
+# 🚀 Virtual Space Exploration: AR & VR  
 
 Repo ini dibuat sebagai bahan pembelajaran **Augmented Reality (AR)** dan **Virtual Reality (VR)** menggunakan **A-Frame** dan **AR.js** dalam rangka __Ujian Akhir Semester__ mata kuliah **Augmented dan Virtual Reality**.  
 Proyek ini mengangkat tema **Eksplorasi Luar Angkasa**, di mana pengguna dapat menjelajahi planet dalam **Augmented Reality (AR)** serta melakukan eksplorasi lingkungan **Virtual Reality (VR)** menggunakan A-Frame.  

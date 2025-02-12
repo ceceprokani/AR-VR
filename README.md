@@ -9,7 +9,7 @@ Proyek ini mengangkat tema **Eksplorasi Luar Angkasa**, di mana pengguna dapat m
 
 ## 📸 Screenshot Aplikasi  
 <div align="center">
-    <img src="assets/screenshoot_uas.jpg?v=251120241400" alt="Screenshot Aplikasi" width="700"/>
+    <img src="assets/images/application.png?v=120220250326" alt="Screenshot Aplikasi" width="700"/>
 </div>  
 
 ---
@@ -23,34 +23,34 @@ Proyek ini mengangkat tema **Eksplorasi Luar Angkasa**, di mana pengguna dapat m
 
 #### 📌 Semua Marker  
 <div align="center">
-    <img src="assets/paper_uas.png?v=251120241400" alt="Semua Marker" width="700"/>
+    <img src="assets/images/marker/marker-all.png?v=251120241400" alt="Semua Marker" width="700"/>
 </div>  
 
 #### 🪐 Marker Per Planet  
 
-- **Planet 1**  
+- **Planet 1 - Bumi**  
 <div align="center">
-    <img src="assets/planet-1.png" alt="Marker Planet 1" width="300"/>
+    <img src="assets/images/marker/marker-1.png" alt="Marker Planet 1" width="300"/>
 </div>  
 
-- **Planet 2**  
+- **Planet 2 - Bulan**  
 <div align="center">
-    <img src="assets/planet-2.png" alt="Marker Planet 2" width="300"/>
+    <img src="assets/images/marker/marker-2.png" alt="Marker Planet 2" width="300"/>
 </div>  
 
-- **Planet 3**  
+- **Planet 3 - Mars**  
 <div align="center">
-    <img src="assets/planet-3.png" alt="Marker Planet 3" width="300"/>
+    <img src="assets/images/marker/marker-3.png" alt="Marker Planet 3" width="300"/>
 </div>  
 
-- **Planet 4**  
+- **Planet 4 - Jupiter**  
 <div align="center">
-    <img src="assets/planet-4.png" alt="Marker Planet 4" width="300"/>
+    <img src="assets/images/marker/marker-4.png" alt="Marker Planet 4" width="300"/>
 </div>  
 
-- **Planet 5**  
+- **Planet 5 - Matahari**  
 <div align="center">
-    <img src="assets/planet-5.png" alt="Marker Planet 5" width="300"/>
+    <img src="assets/images/marker/marker-5.png" alt="Marker Planet 5" width="300"/>
 </div>  
 
 ---

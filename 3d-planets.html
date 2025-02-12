@@ -9,52 +9,94 @@
 <body style="margin: 0px; overflow: hidden">
   <a-scene embedded arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
     <a-assets>
-      <a-asset-item id="earth-model"
-        src="assets/3d-planets/assets/earth/scene.gltf?v=202502101005">
-      </a-asset-item>
-      <a-asset-item id="moon-model"
-        src="assets/3d-planets/assets/moon/scene.gltf?v=202502101019">
-      </a-asset-item>
-      <a-asset-item id="mars-model"
-        src="assets/3d-planets/assets/mars/mars.gltf?v=202502101005">
-      </a-asset-item>
-      <a-asset-item id="jupiter-model"
-        src="assets/3d-planets/assets/jupiter/scene.gltf?v=202502101005">
-      </a-asset-item>
-      <a-asset-item id="sun-model"
-        src="assets/3d-planets/assets/sun/scene.gltf?v=202502101005">
-      </a-asset-item>
+      <a-asset-item id="earth-model" src="assets/3d-planets/assets/earth/scene.gltf"></a-asset-item>
+      <a-asset-item id="moon-model" src="assets/3d-planets/assets/moon/scene.gltf"></a-asset-item>
+      <a-asset-item id="mars-model" src="assets/3d-planets/assets/mars/mars.gltf"></a-asset-item>
+      <a-asset-item id="jupiter-model" src="assets/3d-planets/assets/jupiter/scene.gltf"></a-asset-item>
+      <a-asset-item id="sun-model" src="assets/3d-planets/assets/sun/scene.gltf"></a-asset-item>
     </a-assets>
 
     <a-marker preset="hiro">
-      <a-entity gltf-model="#earth-model" scale="0.2 0.2 0.2"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      <a-entity id="earth" gltf-model="#earth-model" scale="0.2 0.2 0.2"
+        rotation="0 0 0" class="draggable"></a-entity>
     </a-marker>
 
     <a-marker preset="kanji">
-      <a-entity gltf-model="#sun-model" scale="0.2 0.2 0.2"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      <a-entity id="sun" gltf-model="#sun-model" scale="0.2 0.2 0.2"
+        rotation="0 0 0" class="draggable"></a-entity>
     </a-marker>
 
     <a-marker type="barcode" value="10">
-      <a-entity gltf-model="#moon-model" scale="0.3 0.3 0.3"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      <a-entity id="moon" gltf-model="#moon-model" scale="0.3 0.3 0.3"
+        rotation="0 0 0" class="draggable"></a-entity>
     </a-marker>
 
     <a-marker type="barcode" value="11">
-      <a-entity gltf-model="#mars-model" scale="1 1 1"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      <a-entity id="mars" gltf-model="#mars-model" scale="1 1 1"
+        rotation="0 0 0" class="draggable"></a-entity>
     </a-marker>
 
     <a-marker type="barcode" value="12">
-      <a-entity gltf-model="#jupiter-model" scale="0.05 0.05 0.05"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 5000;"></a-entity>
+      <a-entity id="jupiter" gltf-model="#jupiter-model" scale="0.05 0.05 0.05"
+        rotation="0 0 0" class="draggable"></a-entity>
     </a-marker>
 
     <a-entity camera>
       <a-cursor></a-cursor>
     </a-entity>
   </a-scene>
+
+  <script>
+    let isDragging = false;
+    let previousX = 0;
+
+    // Event Listener untuk Mouse (Desktop)
+    document.addEventListener("mousedown", (event) => {
+      isDragging = true;
+      previousX = event.clientX;
+    });
+
+    document.addEventListener("mousemove", (event) => {
+      if (!isDragging) return;
+      
+      let deltaX = event.clientX - previousX;
+      previousX = event.clientX;
+
+      rotateModels(deltaX);
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
+
+    // Event Listener untuk Touch (Mobile)
+    document.addEventListener("touchstart", (event) => {
+      isDragging = true;
+      previousX = event.touches[0].clientX;
+    });
+
+    document.addEventListener("touchmove", (event) => {
+      if (!isDragging) return;
+
+      let deltaX = event.touches[0].clientX - previousX;
+      previousX = event.touches[0].clientX;
+
+      rotateModels(deltaX);
+    });
+
+    document.addEventListener("touchend", () => {
+      isDragging = false;
+    });
+
+    // Fungsi untuk memutar semua objek 3D
+    function rotateModels(deltaX) {
+      document.querySelectorAll(".draggable").forEach(entity => {
+        let rotation = entity.getAttribute("rotation");
+        rotation.y += deltaX * 0.5; // Sesuaikan sensitivitas rotasi
+        entity.setAttribute("rotation", rotation);
+      });
+    }
+  </script>
 </body>
 
 </html>
